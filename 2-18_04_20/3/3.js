@@ -1,5 +1,5 @@
-let a = 2;
-let b = -3;
+let a = 0;
+let b = 3;
 
 if (a>=0 && b>=0) {
     alert(a-b);
