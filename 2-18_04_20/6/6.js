@@ -7,7 +7,7 @@ function sum(a,b) {
     result = a+b;
     return result;
 }
-function subtract(a,b) {
+function subtract(a,b) { // 4. операция производит расчет и возвращает резульат
     result = a-b;
     return result;
 }
@@ -23,12 +23,12 @@ function divide(a,b) {
 }
 
 function mathOperation(a,b,operation) {
-    switch (operation) {
+    switch (operation) { // 2. switch ищет совпадения... какую операцию выполнить
         case 'сложение':
             result = sum(a,b);
             break;
         case 'вычитание':
-            result = subtract(a,b);
+            result = subtract(a,b); // 3. Если совпадение найдено, вызывается нужная для вычислений операция
             break;
         case 'умножение':
             result = multiply(a,b);
@@ -39,7 +39,7 @@ function mathOperation(a,b,operation) {
         default:
             result='Введены некорректные значения';
     }
-    return result;
+    return result; // 5. После получения результата вычесления от вспомогательной функции (sum, subtract и т.д), функция mathOperation возвращает конечный результат.
 }
 
-alert(mathOperation(a,b,operation));
+alert(mathOperation(a,b,operation)); // 1. Вызываем функцию
