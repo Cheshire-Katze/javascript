@@ -1,54 +1,38 @@
-let a = parseInt(prompt("Введите число от 0 до 15"));
+let a = parseFloat(prompt("Введите число от 0 до 15"));
 
 switch (a) {
     case 0:
-        alert('0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(0);
     case 1:
-        alert('1,2,3,4,5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(1);
     case 2:
-        alert('2,3,4,5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(2);
     case 3:
-        alert('3,4,5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(3);
     case 4:
-        alert('4,5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(4);
     case 5:
-        alert('5,6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(5);
     case 6:
-        alert('6,7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(6);
     case 7:
-        alert('7,8,9,10,11,12,13,14,15');
-        break;
+        document.write(7);
     case 8:
-        alert('8,9,10,11,12,13,14,15');
-        break;
+        document.write(8);
     case 9:
-        alert('9,10,11,12,13,14,15');
-        break;
+        document.write(9);
     case 10:
-        alert('10,11,12,13,14,15');
-        break;
+        document.write(10);
     case 11:
-        alert('11,12,13,14,15');
-        break;
+        document.write(11);
     case 12:
-        alert('12,13,14,15');
-        break;
+        document.write(12);
     case 13:
-        alert('13,14,15');
-        break;
+        document.write(13);
     case 14:
-        alert('14,15');
-        break;
+        document.write(14);
     case 15:
-        alert('15');
-        break;
+        document.write(15);
     default:
         alert('Неверное значение')
 }
