@@ -1,10 +1,17 @@
+
+
+
+
+
+
+
 function even_odd(a) {
     return a%2;
 }
 
 let i = 0;
 let mas = [];
-
+function output(a,b) {
     do {
         if (i === 0) {
             mas.push(i + " - это ноль");
@@ -19,8 +26,8 @@ let mas = [];
             }
         }
     } while (i <= 10);
-
+}
 
 for (i=0; i<mas.length; i++) {
-    document.writeln(mas[i] + '<br>');
+    document.write(mas[i] + '<br>');
 }
