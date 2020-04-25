@@ -1,41 +1,11 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let i;
 let s;
+let q = '';
 
-for (i=1; i<=21; i++) {
+for (i=1; i<=20; i++) {
     for (s=0; s<i; s++) {
-        document.write(s);
+        q += ('x');
     }
-    document.write('<br>');
-
+    console.log(q);
+    q = '';
 }
