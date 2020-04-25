@@ -1,39 +1,16 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let i = 0;
-let res = 0;
-while (i>=0 && i<=20) {
 
-    // if (i >= 2) {
-    //     res = i % 2;
-    // }
+while (i>=0 && i<=100) {
 
-    if (res !== 0) {
-        document.write(i + " ");
-        i++;
+    for (let r = 2; i>=r; r++) {
+
+        if (i % r == 0 && i!==r) {
+            break;
+        }
+        else if (i==r) {
+            document.write(i + ' ');
+        }
     }
-    else i++;
+
+    i++;
 }
-
-
-
-// alert(i);
-// alert(res);
-// alert(mas);
