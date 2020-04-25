@@ -1,33 +1,26 @@
 
+let mas = []; // пустой  массив, в котором будет формироваться список
 
-
-
-
-
-
-function even_odd(a) {
-    return a%2;
-}
-
-let i = 0;
-let mas = [];
-function output(a,b) {
+function even_odd(a,b) { // функция
     do {
-        if (i === 0) {
-            mas.push(i + " - это ноль");
-            i++;
+        if (a === 0) {
+            mas.push(a + " - это ноль");
+            a++;
         } else {
-            if (even_odd(i) === 0) {
-                mas.push(i + " - четное число")
-                i++;
+            if (a%2 === 0) {
+                mas.push(a + " - четное число")
+                a++;
             } else {
-                mas.push(i + " - нечетное число");
-                i++;
+                mas.push(a + " - нечетное число");
+                a++;
             }
         }
-    } while (i <= 10);
+    } while (a <= b);
+    return mas;
 }
 
-for (i=0; i<mas.length; i++) {
+even_odd(0,10); // вызов функции
+
+for (let i=0; i<mas.length; i++) { // вывод массива на экран
     document.write(mas[i] + '<br>');
 }
