@@ -24,12 +24,14 @@ if (a>=0 && a<=999) {
     delete number.hundreds;
     delete number.decades;
     delete number.units;
+
     console.log('Введено некорректное число!');
     return console.log(number);
 } else {
     delete number.hundreds;
     delete number.decades;
     delete number.units;
+    // без удаления свойств, в консоль выводится объект с нулевыми значениями свойств
     console.log('Введены некорректные значения!');
     return console.log(number);
 }
