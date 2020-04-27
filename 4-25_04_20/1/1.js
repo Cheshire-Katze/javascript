@@ -12,6 +12,11 @@ if (a>=0 && a<=999) {
     number.decades = Math.floor(a/10);
     number.units = a-(number.decades*10);
 
+    // для себя попробовал, чтобы увидеть как работает перебор свойств объекта.
+    /*  for (let pop in number) {
+        console.log(pop  + ': ' + number[pop]);
+    }*/
+
     return console.log(number);
     //return console.log('сотни: ' + number.hundreds + ' десятки: ' + number.decades + ' единицы: ' + number.units);
 
