@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chess</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+<script>
+    function tableCreate(){
+        let body = document.body,
+            tbl  = document.createElement('table'),
+            flag = false,
+            mas = ['','H','G','F','E','D','C','B','A',''],
+            figure_white = ['', '&#9814;', '&#9816;', '&#9815;', '&#9813;', '&#9812;', '&#9815;', '&#9816;', '&#9814;', '&#9817;'],
+            figure_black = ['', '&#9820;', '&#9822;', '&#9821;', '&#9819;', '&#9818;', '&#9821;', '&#9822;', '&#9820;', '&#9823;'];
+
+        tbl.style.outline = '10px solid grey';
+        tbl.style.margin = '0 auto';
+        body.style.padding = '100px';
+
+// lines
+        for(let i = 0; i < 10; i++) {
+            let tr = tbl.insertRow();
+
+            // cells
+            for(let j = 0; j < 10; j++){
+                let td = tr.insertCell();
+                td.style.width = '100px';
+                td.style.height = '100px';
+                td.style.padding = '0px';
+                td.style.outline = '1px solid grey';
+                td.style.textAlign = 'center';
+
+                if (i>0 && i<9){
+                    if (j>0 && j<9){
+                        if (flag) {
+                            td.style.backgroundColor = 'grey';
+                        }
+                        // add black figures
+                        if (i==1 && j>0) {
+                            td.innerHTML = figure_black[j];
+                            td.style.fontSize = '70px';
+                            td.className = 'rotate';
+                        } else if (i==2) {
+                            td.innerHTML = figure_black[9];
+                            td.style.fontSize = '70px';
+                            td.className = 'rotate';
+                        }
+                        // add white figures
+                        if (i==8 && j>0) {
+                            td.innerHTML = figure_white[j];
+                            td.style.fontSize = '70px';
+                        } else if (i==7) {
+                            td.innerHTML = figure_white[9];
+                            td.style.fontSize = '70px';
+                        }
+
+                        // add numbers
+                    } else if (j==0) {
+                        td.style.outline = 'none';
+                        td.innerHTML = i;
+                        td.style.width = '20px';
+                    } else {
+                        td.style.outline = 'none';
+                        td.innerHTML = i;
+                        td.style.width = '20px';
+                        td.className = 'rotate';
+                    }
+
+                    // add words
+                } else if (i==0) {
+                    td.style.outline = 'none';
+                    td.innerHTML = mas[j];
+                    td.className = 'rotate';
+                    td.style.width = '20px';
+                    td.style.height = '20px';
+                } else {
+                    td.style.outline = 'none';
+                    td.innerHTML = mas[j];
+                    td.style.width = '20px';
+                    td.style.height = '20px';
+                }
+                flag = !flag;
+            }
+            flag = !flag;
+        }
+        body.appendChild(tbl);
+    }
+    tableCreate();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+.rotate {
+    width: max-content;
+    transform: rotate(180deg);
+}
