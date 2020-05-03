@@ -3,76 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>pictures</title>
-    <link rel="stylesheet" href="1.css">
 </head>
-
 <body>
-<!--<img id="small_1" src="img/1.png" alt="img" width="100px" height="100px">-->
-<!--<img id="small_2" src="img/2.png" alt="img" width="100px" height="100px">-->
-<!--<img id="small_3" src="img/3.png" alt="img" width="100px" height="100px">-->
-<!--<img id="big_1" src="" alt="img" width="500px" height="500px">-->
-<!--<img id="big_2" src="" alt="img" width="500px" height="500px">-->
-<!--<img id="big_3" src="" alt="img" width="100px" height="100px">-->
+    <img id="small_1" src="img/small_1.png" alt="img" width="100px" height="100px">
+    <img id="small_2" src="img/small_2.png" alt="img" width="100px" height="100px">
+    <img id="small_3" src="img/small_3.png" alt="img" width="100px" height="100px">
 
 <script>
+// создаем img для увеличенной картинки
+    let img = document.createElement('img');
+    document.body.appendChild(img);
+    img.style.display = 'none';
 
-    
+    document.getElementById('small_1').onclick =  () => {
+    img.src = 'img/big_1.png';
+    img.onload = () => { // если картинка загрузилась в img, то img добавляется в body и img присваивается display = block
+            document.body.appendChild(img);
+            img.style.display = 'block';
+        }
+    img.onerror = () => {alert('Изображение не найдено')} // в противном случае появляется сообщение об ошибке
+    }
 
+    document.getElementById('small_2').onclick =  () => {
+        img.src = 'img/big_2.png';
+        img.onload = () => {
+            document.body.appendChild(img);
+            img.style.display = 'block';
+        }
+        img.onerror = () => {alert('Изображение не найдено')}
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // let small_1 = document.createElement('img');
-    // let small_2 = document.createElement('img');
-    // let small_3 = document.createElement('img');
-    // document.body.appendChild(small_1);
-    // document.body.appendChild(small_2);
-    // document.body.appendChild(small_3);
-    //
-    // small_1.style.width = '100px';
-    // small_1.src = 'img/1.png';
-    // small_2.style.width = '100px';
-    // small_2.src = 'img/2.png';
-    // small_3.style.width = '100px';
-    // small_3.src = 'img/3.png';
-    //
-    // function click() {
-    //
-    // }
+    document.getElementById('small_3').onclick =  () => {
+        img.src = 'img/big_3.png';
+        img.onload = () => {
+            document.body.appendChild(img);
+            img.style.display = 'block';
+        }
+        img.onerror = () => {
+            alert('Изображение не найдено');
+            img.style.display = 'none';
+        }
+    }
 </script>
 </body>
 </html>
