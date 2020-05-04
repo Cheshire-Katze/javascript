@@ -1,0 +1,4 @@
+.wrp {
+    display: flex;
+    flex-direction: row;
+}
